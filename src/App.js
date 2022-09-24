@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Dropdown from "./Dropdown"
+import Dropdown2 from './Dropdown2';
 
 function App() {
+
+  const [selected, setSelected] = useState("")
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h3 className='drop-heading'>Should you use a dropdown ?</h3>
+      {/* <Dropdown selected={selected} setSelected={setSelected} /> */}
+      <Dropdown2 />
     </div>
   );
 }
