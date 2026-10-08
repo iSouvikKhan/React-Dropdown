@@ -1,6 +1,53 @@
-# Getting Started with Create React App
+# React Dropdown
+
+A small React practice project that shows two ways to build a dropdown menu: a hand-made component written with React state and CSS, and one built with the [react-select](https://react-select.com/) library. The page asks "Should you use a dropdown ?" and offers the options "Yes" and "Probably not".
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Features
+
+- `Dropdown` (`src/Dropdown.js`): a custom dropdown that toggles its option list on click and stores the selected value through `selected` / `setSelected` props. Styled in `src/Dropdown.css`.
+- `Dropdown2` (`src/Dropdown2.js`): the same two options rendered with the `Select` component from `react-select`.
+
+`App.js` currently renders `Dropdown2`. The custom `Dropdown` is imported but commented out; to try it, uncomment this line in `src/App.js`:
+
+```jsx
+{/* <Dropdown selected={selected} setSelected={setSelected} /> */}
+```
+
+## Tech Stack
+
+- React 18
+- react-select 5
+- Create React App (`react-scripts` 5)
+
+## Project Structure
+
+```
+React-Dropdown/
+├── public/            # index.html, icons, manifest
+├── src/
+│   ├── App.js         # Page heading and the active dropdown
+│   ├── App.css
+│   ├── Dropdown.js    # Custom dropdown component
+│   ├── Dropdown.css
+│   ├── Dropdown2.js   # react-select dropdown
+│   ├── index.js       # Entry point
+│   └── index.css
+└── package.json
+```
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) and npm
+
+## Installation
+
+```bash
+git clone https://github.com/iSouvikKhan/React-Dropdown.git
+cd React-Dropdown
+npm install
+```
 
 ## Available Scripts
 
@@ -8,63 +55,22 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page reloads when you make changes.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode. The project currently contains no test files.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the app for production into the `build` folder.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Note: this is a one-way operation.** Copies the Create React App build configuration (webpack, Babel, ESLint, etc.) into the project so you can customize it.
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)
+- [React documentation](https://reactjs.org/)
+- [react-select documentation](https://react-select.com/home)
